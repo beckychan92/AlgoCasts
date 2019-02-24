@@ -8,7 +8,15 @@
 
 function reverse(str) {
     return str.split('').reverse().join('');
+}
 
+function reverse(str) {
+    var strArr = str.split('');
+    var newStr = '';
+    for(var i = strArr.length - 1; i >= 0 ; i--){
+        newStr += strArr[i];
+    }
+    return newStr;
 }
 
 module.exports = reverse;
