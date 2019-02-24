@@ -26,13 +26,27 @@ function reverse3(str) {
     return newStr.join('')
 }
 
-function reverse(str) {
+function reverse4(str) {
     var reversed = '';
     for(var char of str) {
-        console.log(char)
         reversed = char + reversed;
     }
     return reversed
+}
+
+function reverse5(str) {
+    var result = '';
+	str = str.split('')
+    while(str.length > 0) {
+        result += str.splice(str.length -1)
+    }
+    return result;
+}
+
+function reverse(str) {
+    return str.split('').reduce((reversed, char) => {
+        return char + reversed;
+    }, '')
 }
 
   
