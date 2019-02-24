@@ -26,6 +26,14 @@ function reverse3(str) {
     return newStr.join('')
 }
 
+function reverse(str) {
+    var reversed = '';
+    for(var char of str) {
+        console.log(char)
+        reversed = char + reversed;
+    }
+    return reversed
+}
 
   
 console.log(reverse('abcd') === 'dcba');
