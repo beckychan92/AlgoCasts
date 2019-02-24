@@ -6,11 +6,11 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
-function reverse(str) {
+function reverse1(str) {
     return str.split('').reverse().join('');
 }
 
-function reverse(str) {
+function reverse2(str) {
     var strArr = str.split('');
     var newStr = '';
     for(var i = strArr.length - 1; i >= 0 ; i--){
@@ -19,7 +19,19 @@ function reverse(str) {
     return newStr;
 }
 
-module.exports = reverse;
+function reverse3(str) {
+    var newStr = [];
+    str = str.split('')
+    str.map(char => { newStr.unshift(char) })
+    return newStr.join('')
+}
+
+
   
 console.log(reverse('abcd') === 'dcba');
 console.log(reverse('  abcd') === 'dcba  ');
+
+
+
+
+module.exports = reverse;
